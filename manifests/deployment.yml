@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pipelinessampleapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pipelinessampleapp 
+    spec:
+      containers:
+        - name: pipelinessampleapp 
+          image: aksdeepdiveunique.azurecr.io/pipelinessampleapp
+          ports:
+          - containerPort: 8080
